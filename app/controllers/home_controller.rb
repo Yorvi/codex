@@ -31,6 +31,8 @@ class HomeController < ApplicationController
       flash[:error] = "something went wrong"
       redirect_to new_user_path
     end
+
+    WelcomeMailer.welcome_send(@user).deliver_now
   end
 
   def new

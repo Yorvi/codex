@@ -987,3 +987,425 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/rails/mailers/welcome_mailer" for 127.0.0.1 at 2018-06-08 02:06:26 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"welcome_mailer"}
+  Rendering /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 309ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send" for 127.0.0.1 at 2018-06-08 02:06:28 -0400
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.4ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_send: processed outbound mail in 1047.6ms
+  Rendering /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb (7.8ms)
+Completed 200 OK in 1103ms (Views: 16.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send?part=text%2Fhtml" for 127.0.0.1 at 2018-06-08 02:06:29 -0400
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.9ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.7ms)
+WelcomeMailer#welcome_send: processed outbound mail in 87.2ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 97ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send?part=text%2Fplain" for 127.0.0.1 at 2018-06-08 02:06:39 -0400
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/plain", "path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.4ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_send: processed outbound mail in 62.4ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 66ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send.txt?part=text%2Fhtml" for 127.0.0.1 at 2018-06-08 02:06:42 -0400
+Processing by Rails::MailersController#preview as TEXT
+  Parameters: {"part"=>"text/html", "path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.4ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_send: processed outbound mail in 67.0ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 71ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send.html" for 127.0.0.1 at 2018-06-08 02:09:31 -0400
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.4ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_send: processed outbound mail in 60.7ms
+  Rendering /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb (3.5ms)
+Completed 200 OK in 76ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send.html?part=text%2Fhtml" for 127.0.0.1 at 2018-06-08 02:09:31 -0400
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.4ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_send: processed outbound mail in 59.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 63ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send.html?part=text%2Fplain" for 127.0.0.1 at 2018-06-08 02:09:45 -0400
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/plain", "path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.5ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_send: processed outbound mail in 65.6ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_send.txt?part=text%2Fhtml" for 127.0.0.1 at 2018-06-08 02:09:51 -0400
+Processing by Rails::MailersController#preview as TEXT
+  Parameters: {"part"=>"text/html", "path"=>"welcome_mailer/welcome_send"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/welcome_mailer_preview.rb:6
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (0.4ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_send: processed outbound mail in 61.9ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 67ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (1.9ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_send: processed outbound mail in 129.0ms
+Sent mail to jorvinrosario7@gmail.com (380.2ms)
+Date: Fri, 08 Jun 2018 02:13:17 -0400
+From: support@example.com
+To: jorvinrosario7@gmail.com
+Message-ID: <5b1a1e7ddef14_39e23fed7403f7f497542@Yorvin-Mac.local.mail>
+Subject: Welcome Aboard! Yorvin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b1a1e25c2240_39e23fed7403f7f49748b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b1a1e25c2240_39e23fed7403f7f49748b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome aboard Yorvin!
+
+Thank you for registering to our site
+Thanks, from your friends over at COD{EX}
+----==_mimepart_5b1a1e25c2240_39e23fed7403f7f49748b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome aboard Yorvin!</h1>
+
+<h2>Thank you for registering to our site</h2>
+
+    
+    <p>
+      Thanks, from your friends over at COD{EX}
+    </p>
+    
+  </body>
+</html>
+
+----==_mimepart_5b1a1e25c2240_39e23fed7403f7f49748b--
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-08 02:17:48 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 874ms (Views: 848.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-06-08 02:18:10 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E0kdZhcr7jx5rexaZ3Q/40uVDMPg4RoPcW/NWi8YoFnWn/8zlMlRN6CFmO2KcLxC8EHNv2hGMixJpb2v2GZBnA==", "user"=>{"first_name"=>"Yorvin", "last_name"=>"Rosario", "email"=>"yorvinmr@gmail.com", "username"=>"jmillz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yorvinmr@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "yorvinmr@gmail.com"], ["encrypted_password", "$2a$11$NMajeKhroyZcykQ8MWNfHuJsHvY/E/Od2.Bm8NG5MIFPNnBCmbUh6"], ["created_at", "2018-06-08 06:18:10.890132"], ["updated_at", "2018-06-08 06:18:10.890132"], ["username", "jmillz"], ["first_name", "Yorvin"], ["last_name", "Rosario"]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-06-08 06:18:10.895812"], ["last_sign_in_at", "2018-06-08 06:18:10.895812"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-06-08 06:18:10.896838"], ["id", 2]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-08 02:18:10 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-08 02:19:11 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"13Q3gMgoZe7y2BYVTBY1aNcmUd/AmarwCn1yS6TEPygSotXVS8ra5SvwYqKhErbJbPKQo0g+gtMytwK+U7re7Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-08 02:19:11 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-08 02:19:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (1.8ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_send: processed outbound mail in 102.2ms
+Sent mail to yorvinmr@gmail.com (299.5ms)
+Date: Fri, 08 Jun 2018 02:20:35 -0400
+To: yorvinmr@gmail.com
+Message-ID: <5b1a20336868d_3a8d3fed7403f7f437030@Yorvin-Mac.local.mail>
+Subject: Welcome Aboard! Yorvin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b1a202b6141_3a8d3fed7403f7f43692c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b1a202b6141_3a8d3fed7403f7f43692c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome aboard Yorvin!
+
+Thank you for registering to our site
+Thanks, from your friends over at COD{EX}
+----==_mimepart_5b1a202b6141_3a8d3fed7403f7f43692c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome aboard Yorvin!</h1>
+
+<h2>Thank you for registering to our site</h2>
+
+    
+    <p>
+      Thanks, from your friends over at COD{EX}
+    </p>
+    
+  </body>
+</html>
+
+----==_mimepart_5b1a202b6141_3a8d3fed7403f7f43692c--
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (1.8ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_send: processed outbound mail in 100.0ms
+Sent mail to yorvinmr@gmail.com (285.0ms)
+Date: Fri, 08 Jun 2018 02:21:45 -0400
+From: jorvinrosario7@gmail.com
+To: yorvinmr@gmail.com
+Message-ID: <5b1a207947337_3b903fcb6483f7c4419e2@Yorvin-Mac.local.mail>
+Subject: Welcome Aboard! Yorvin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b1a20769d2b0_3b903fcb6483f7c4418ab";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b1a20769d2b0_3b903fcb6483f7c4418ab
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome aboard Yorvin!
+
+Thank you for registering to our site
+Thanks, from your friends over at COD{EX}
+----==_mimepart_5b1a20769d2b0_3b903fcb6483f7c4418ab
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome aboard Yorvin!</h1>
+
+<h2>Thank you for registering to our site</h2>
+
+    
+    <p>
+      Thanks, from your friends over at COD{EX}
+    </p>
+    
+  </body>
+</html>
+
+----==_mimepart_5b1a20769d2b0_3b903fcb6483f7c4418ab--
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_send.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.html.erb within layouts/mailer (2.1ms)
+  Rendering welcome_mailer/welcome_send.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_send.text.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_send: processed outbound mail in 100.3ms
+Sent mail to yorvinmr@gmail.com (589.1ms)
+Date: Fri, 08 Jun 2018 02:24:59 -0400
+From: jorvinrosario7@gmail.com
+To: yorvinmr@gmail.com
+Message-ID: <5b1a213b56f13_3d1b3fc49143f7d491471@Yorvin-Mac.local.mail>
+Subject: Welcome Aboard! Yorvin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b1a213978f5_3d1b3fc49143f7d49137e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b1a213978f5_3d1b3fc49143f7d49137e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome aboard Yorvin!
+
+Thank you for registering to our site
+Thanks, from your friends over at COD{EX}
+----==_mimepart_5b1a213978f5_3d1b3fc49143f7d49137e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome aboard Yorvin!</h1>
+
+<h2>Thank you for registering to our site</h2>
+
+    
+    <p>
+      Thanks, from your friends over at COD{EX}
+    </p>
+    
+  </body>
+</html>
+
+----==_mimepart_5b1a213978f5_3d1b3fc49143f7d49137e--
+
