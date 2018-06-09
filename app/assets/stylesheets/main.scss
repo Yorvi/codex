@@ -1,0 +1,290 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  height: 100%;
+  margin: 2%;
+  background-color: #272F37;
+  font-family: 'Orbitron', cursive;
+}
+#wrapper {
+  text-align: center;
+}
+#main {
+  // background-color: #272F37;
+  max-width: 1450px;
+  display: inline-block;
+}
+#container {
+  padding-top: 10px;
+  padding-right: 4.5%;
+  padding-left: 4.5%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@font-face {
+  font-family: 'Snowstorm Black';
+  src: url('fonts/Snowstorm Black.otf')
+}
+@font-face {
+  font-family: 'Snowstorm Bold';
+  src: url('fonts/Snowstorm Bold.otf')
+}
+div.notice {
+  margin-top: 30px; 
+  background-color: lightgreen;
+  width: 50%;
+  height: 60px;
+  padding: 1.5% 0 0;
+  text-align: center;
+  font-size: 140%;
+  border-radius: 5px;
+  margin-left: 25%;
+}
+div.alert {
+  margin-top: 30px; 
+  background-color: #ed4f4f;
+  width: 50%;
+  height: 60px;
+  padding: 1.5% 0 0;
+  text-align: center;
+  font-size: 140%;
+  border-radius: 5px;
+  margin-left: 25%;
+}
+
+@media screen and (max-width: 320px) {
+  
+}
+
+@media screen and (max-width: 425px) and (min-width: 321px) {
+  
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  
+}
+
+@media screen and (min-width: 1025px) {
+  .avatar {
+    border: 5px solid yellow;
+    border-radius: 100%;
+    width: 20%; 
+    float: left;
+    position: relative;
+    z-index: 2;
+    margin: 120px 0 0 50px;
+    box-shadow: 0 0 5px #EAEBED;
+  }
+
+  .banner {
+    // background-color: #ed4f4f;
+    background-image: url("banner3.png");
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #191e22;
+    margin-bottom: 200px;
+  }
+
+  .user-info {
+    background-color: #707070;
+    border: 1px solid #615f5f;
+    height: 225px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 157px 0 0 375px;
+    z-index: 2;
+    position: absolute;
+  }
+  .content {
+    width: 100%;
+    // height: 1000px;
+    background-color: #ed4f4f;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #191e22;
+  }
+
+  .info {
+    text-align: left;
+    margin: 0 0 0 10px;
+    font-family: 'Orbitron', cursive;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .heading {
+    font-size: 9rem;
+    font-family: 'Orbitron', cursive;
+    padding: 100px 0 50px;
+  }
+
+  .main-course {
+    width: 35%;
+    height: 200px;
+    // background-color: #707070;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #615f5f; 
+    box-shadow: 0 0 5px #191e22;
+  }
+
+  .course {
+    width: 50%;
+    height: 250px;
+    background-color: #707070;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid #615f5f; 
+    box-shadow: 0 0 5px #191e22;
+  }
+  .course p {
+    margin-top: 75px;
+    font-size: 6rem;
+    margin-left: 30px;
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white; 
+  }
+  .js {
+    font-family: 'Snowstorm Bold', cursive;
+    border: 10px solid #E4A138; 
+    background-image: linear-gradient(90deg, #E4A138 50%, #F0BE3B 50%);
+  }
+  .rb {
+    font-family: 'Snowstorm Bold', cursive;
+    border: 10px solid #97111C; 
+    background-image: linear-gradient(90deg, #97111C 50%, #EA1C2C 50%);
+  }
+  .etc {
+    font-family: 'Snowstorm Bold', cursive;
+    border: 10px solid #444444; 
+    background-image: linear-gradient(90deg, #444444 50%, #DADADA 50%);
+  }
+
+  .status {
+    float: right;
+    padding: 5px;
+    color: white;
+    background: linear-gradient(45deg, #808080, #575757);
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #575757;
+    display: inline-block;
+  }
+
+  .main-course p {
+    margin-top: 50px;
+    font-size: 6rem;
+    margin-left: 50px;
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white; 
+  }
+
+  .html {
+    font-family: 'Snowstorm Bold', cursive;
+    border: 10px solid #E24E30; 
+    background-image: linear-gradient(90deg, #E24E30 50%, #EF6535 50%);
+  }
+
+  .css {
+    font-family: 'Snowstorm Bold', cursive;
+    border: 10px solid #1071B8; 
+    background-image: linear-gradient(90deg, #1071B8 50%, #A5DAF0 50%);
+  }
+
+
+
+  
+  .form {
+    background-color: gainsboro;
+    width: 40%;
+    display: inline-block;
+    box-shadow: 0 0 5px #191e22;
+    border-radius: 5px;
+  }
+
+  .form h2 {
+    margin: 0;
+    padding: 15px 0;
+    background: #1071B8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .input {
+    padding-left: 20px;
+    width: 87%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 0px;
+  }
+
+  .name-field {
+    width: 90%;
+    display: inline-block;
+    margin-top: 25px;
+  }
+  .name-field .input {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #1071B8;
+  }
+  .name-field input {
+    padding-left: 20px;
+    font-size: 20px;
+  }
+  .name-field .fname {
+    float: left;
+    text-align: left;
+  }
+  .name-field .lname {
+    float: right;
+    text-align: left;
+  }
+  .name-field div:nth-child(1) {
+    float: left;
+    width: 50%;
+  }
+  .name-field div:nth-child(2) {
+    float: right;
+    width: 50%;
+  }
+  .field em {
+    display: none;
+  }
+  .btn {
+    margin: 0 5% 5% 5%;
+    width: 200px;
+    height: 50px;
+    background-color: #1071B8;
+    border-radius: 5px; 
+    font-family: 'Orbitron', cursive;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
+  .secondary-btn {
+    margin-bottom: 5%;
+  }
+
+
+
+
+
+
+  
+}

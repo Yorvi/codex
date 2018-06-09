@@ -1,26 +1,15 @@
-
-
-
-<h1>Welcome to Codex</h1>
-<h3>Sign in or sign up to begin coding</h3>
-
-<%= link_to 'Sign In', user_session_path %>
-
-<%= link_to 'Sign Up', new_user_registration_path %>
-
-
-
-<!-- <div id="main">
+<div id="main">
   <div id="container">
   <div>
     <div class="banner">
       <%= image_tag 'avatar.png', :class => "avatar" %>
       <div class="user-info">
         <div class="info">
-          <p>Name: Yorvin Rosario</p>
-          <p>Username: Yorvi</p>
-          <p>E-Mail: jorvinrosario7@gmail.com</p><br>
+          <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+          <p>Username: <%= @user.username %></p>
+          <p>E-Mail: <%= @user.email %></p><br>
           <p>Current Course: JavaScript</p>
+          <div class="sign-out-btn"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "" %></div>
         </div>
         
       </div>
@@ -56,9 +45,9 @@
         <p>RUBY</p>
       </div>
       <div class="course etc">
-        # <div class="status">
+        <!-- <div class="status">
          <i data-feather="circle"></i> 
-        </div> #
+        </div> -->
         <p>ETC. </p>
       </div>
       <div class="clear"></div>
@@ -68,4 +57,4 @@
     
 
   </div>
-</div> -->
+</div>
