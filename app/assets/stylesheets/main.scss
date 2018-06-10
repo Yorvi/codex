@@ -281,7 +281,44 @@ div.alert {
     margin-bottom: 5%;
   }
 
+  #container .course-title {
+    width: 1000px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #191e22;
+    margin-bottom: 200px;
+  }
 
+  #container .course-content {
+    width: 96%;
+    background-color: #1071B8;
+    margin: 0 2%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 2px solid #191e22;
+    border-left: 2px solid #191e22;
+    border-right: 2px solid #191e22;
+  }
+
+  .course-content .lessons {
+    padding: 20px 0;
+    border-bottom: 2px solid #191e22;
+  }
+
+  .lessons h2 {
+    display: inline-block;
+  }
+
+  .lesson-status {
+    float: left;
+    margin: 20px 0 0 20px;
+    display: inline-block;
+  }
+
+  .lesson-status svg {
+    fill: white;
+    width: 50px;
+  }
 
 
 

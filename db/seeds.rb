@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(email: "orvinrosario7@gmail.com", username: "Yorviii", first_name: "Yorvin", last_name: "Rosario")
-
 Course.create(name: "HTML")
   Lesson.create(name: "Intro to HTML", course_id: 1)
   Lesson.create(name: "HTML: Basics", course_id: 1)
