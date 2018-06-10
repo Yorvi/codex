@@ -8370,3 +8370,841 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to CreateCourses (20180609194915)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180609194915_create_courses.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180609194915_create_courses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180609194915"]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+Migrating to CreateLessons (20180609194941)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lessons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180609194941_create_lessons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180609194941"]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yorvinrosario/.rvm/gems/ruby-2.4.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCourse Create (1.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "HTML"], ["created_at", "2018-06-10 00:11:49.095931"], ["updated_at", "2018-06-10 00:11:49.095931"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CSS"], ["created_at", "2018-06-10 00:11:49.101431"], ["updated_at", "2018-06-10 00:11:49.101431"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["created_at", "2018-06-10 00:11:49.104544"], ["updated_at", "2018-06-10 00:11:49.104544"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2018-06-10 00:11:49.106951"], ["updated_at", "2018-06-10 00:11:49.106951"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCourse Create (1.9ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "HTML"], ["created_at", "2018-06-10 02:18:20.209542"], ["updated_at", "2018-06-10 02:18:20.209542"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Create (1.1ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to HTML"], ["course_id", "1"], ["created_at", "2018-06-10 02:18:20.257638"], ["updated_at", "2018-06-10 02:18:20.257638"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Basics"], ["course_id", "1"], ["created_at", "2018-06-10 02:18:20.263193"], ["updated_at", "2018-06-10 02:18:20.263193"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Elements"], ["course_id", "1"], ["created_at", "2018-06-10 02:18:20.268037"], ["updated_at", "2018-06-10 02:18:20.268037"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Attributes"], ["course_id", "1"], ["created_at", "2018-06-10 02:18:20.272036"], ["updated_at", "2018-06-10 02:18:20.272036"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Styling with CSS"], ["course_id", "1"], ["created_at", "2018-06-10 02:18:20.275775"], ["updated_at", "2018-06-10 02:18:20.275775"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Interactive with JavaScript"], ["course_id", "1"], ["created_at", "2018-06-10 02:18:20.279821"], ["updated_at", "2018-06-10 02:18:20.279821"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CSS"], ["created_at", "2018-06-10 02:18:20.282520"], ["updated_at", "2018-06-10 02:18:20.282520"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to CSS"], ["course_id", "2"], ["created_at", "2018-06-10 02:18:20.286669"], ["updated_at", "2018-06-10 02:18:20.286669"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Syntax"], ["course_id", "2"], ["created_at", "2018-06-10 02:18:20.290966"], ["updated_at", "2018-06-10 02:18:20.290966"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Styling HTML"], ["course_id", "2"], ["created_at", "2018-06-10 02:18:20.294926"], ["updated_at", "2018-06-10 02:18:20.294926"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Animations"], ["course_id", "2"], ["created_at", "2018-06-10 02:18:20.298892"], ["updated_at", "2018-06-10 02:18:20.298892"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["created_at", "2018-06-10 02:18:20.302256"], ["updated_at", "2018-06-10 02:18:20.302256"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to JavaScript"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.306151"], ["updated_at", "2018-06-10 02:18:20.306151"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Basics"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.316869"], ["updated_at", "2018-06-10 02:18:20.316869"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Variables"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.320922"], ["updated_at", "2018-06-10 02:18:20.320922"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Arrays"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.324427"], ["updated_at", "2018-06-10 02:18:20.324427"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Mathematics"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.328587"], ["updated_at", "2018-06-10 02:18:20.328587"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Conditional Statements"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.332484"], ["updated_at", "2018-06-10 02:18:20.332484"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Loops"], ["course_id", "3"], ["created_at", "2018-06-10 02:18:20.336241"], ["updated_at", "2018-06-10 02:18:20.336241"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2018-06-10 02:18:20.339056"], ["updated_at", "2018-06-10 02:18:20.339056"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to Ruby"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.343175"], ["updated_at", "2018-06-10 02:18:20.343175"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Basics"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.347165"], ["updated_at", "2018-06-10 02:18:20.347165"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Variables"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.351855"], ["updated_at", "2018-06-10 02:18:20.351855"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Arrays"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.356074"], ["updated_at", "2018-06-10 02:18:20.356074"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Mathematics"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.359929"], ["updated_at", "2018-06-10 02:18:20.359929"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Conditional Statements"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.363987"], ["updated_at", "2018-06-10 02:18:20.363987"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Loops"], ["course_id", "4"], ["created_at", "2018-06-10 02:18:20.367941"], ["updated_at", "2018-06-10 02:18:20.367941"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT  "lessons".* FROM "lessons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "lessons"[0m
+  ↳ db/schema.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "lessons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "first_name" varchar, "last_name" varchar)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180609194941)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180607192842),
+(20180609194915),
+(20180607195231);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-10 02:20:35.884767"], ["updated_at", "2018-06-10 02:20:35.884767"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "courses"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "lessons"[0m
+  ↳ db/schema.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "lessons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "course_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "first_name" varchar, "last_name" varchar)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180609194941)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180607192842),
+(20180609194915),
+(20180607195231);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-10 02:20:35.917102"], ["updated_at", "2018-06-10 02:20:35.917102"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-06-10 02:20:35.922180"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCourse Create (0.8ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "HTML"], ["created_at", "2018-06-10 02:20:35.944589"], ["updated_at", "2018-06-10 02:20:35.944589"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to HTML"], ["course_id", "1"], ["created_at", "2018-06-10 02:20:35.979310"], ["updated_at", "2018-06-10 02:20:35.979310"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Basics"], ["course_id", "1"], ["created_at", "2018-06-10 02:20:35.984361"], ["updated_at", "2018-06-10 02:20:35.984361"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Elements"], ["course_id", "1"], ["created_at", "2018-06-10 02:20:35.988737"], ["updated_at", "2018-06-10 02:20:35.988737"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Attributes"], ["course_id", "1"], ["created_at", "2018-06-10 02:20:35.992870"], ["updated_at", "2018-06-10 02:20:35.992870"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Styling with CSS"], ["course_id", "1"], ["created_at", "2018-06-10 02:20:35.996525"], ["updated_at", "2018-06-10 02:20:35.996525"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Interactive with JavaScript"], ["course_id", "1"], ["created_at", "2018-06-10 02:20:36.000350"], ["updated_at", "2018-06-10 02:20:36.000350"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CSS"], ["created_at", "2018-06-10 02:20:36.003751"], ["updated_at", "2018-06-10 02:20:36.003751"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to CSS"], ["course_id", "2"], ["created_at", "2018-06-10 02:20:36.007774"], ["updated_at", "2018-06-10 02:20:36.007774"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mLesson Create (0.5ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Syntax"], ["course_id", "2"], ["created_at", "2018-06-10 02:20:36.012208"], ["updated_at", "2018-06-10 02:20:36.012208"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Styling HTML"], ["course_id", "2"], ["created_at", "2018-06-10 02:20:36.016311"], ["updated_at", "2018-06-10 02:20:36.016311"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Animations"], ["course_id", "2"], ["created_at", "2018-06-10 02:20:36.020680"], ["updated_at", "2018-06-10 02:20:36.020680"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCourse Create (0.8ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["created_at", "2018-06-10 02:20:36.023584"], ["updated_at", "2018-06-10 02:20:36.023584"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to JavaScript"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.027524"], ["updated_at", "2018-06-10 02:20:36.027524"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Basics"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.030762"], ["updated_at", "2018-06-10 02:20:36.030762"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Variables"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.034200"], ["updated_at", "2018-06-10 02:20:36.034200"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Arrays"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.045202"], ["updated_at", "2018-06-10 02:20:36.045202"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Mathematics"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.048795"], ["updated_at", "2018-06-10 02:20:36.048795"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Conditional Statements"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.052169"], ["updated_at", "2018-06-10 02:20:36.052169"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Loops"], ["course_id", "3"], ["created_at", "2018-06-10 02:20:36.059673"], ["updated_at", "2018-06-10 02:20:36.059673"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2018-06-10 02:20:36.062382"], ["updated_at", "2018-06-10 02:20:36.062382"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to Ruby"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.065745"], ["updated_at", "2018-06-10 02:20:36.065745"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Basics"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.069253"], ["updated_at", "2018-06-10 02:20:36.069253"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Variables"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.073250"], ["updated_at", "2018-06-10 02:20:36.073250"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Arrays"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.076738"], ["updated_at", "2018-06-10 02:20:36.076738"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Mathematics"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.079946"], ["updated_at", "2018-06-10 02:20:36.079946"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Conditional Statements"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.082968"], ["updated_at", "2018-06-10 02:20:36.082968"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Loops"], ["course_id", "4"], ["created_at", "2018-06-10 02:20:36.086412"], ["updated_at", "2018-06-10 02:20:36.086412"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "orvinrosario7@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCourse Create (0.6ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "HTML"], ["created_at", "2018-06-10 02:22:31.867342"], ["updated_at", "2018-06-10 02:22:31.867342"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mLesson Create (0.4ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to HTML"], ["course_id", "1"], ["created_at", "2018-06-10 02:22:31.895715"], ["updated_at", "2018-06-10 02:22:31.895715"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mLesson Create (0.7ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Basics"], ["course_id", "1"], ["created_at", "2018-06-10 02:22:31.900176"], ["updated_at", "2018-06-10 02:22:31.900176"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Elements"], ["course_id", "1"], ["created_at", "2018-06-10 02:22:31.904703"], ["updated_at", "2018-06-10 02:22:31.904703"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Attributes"], ["course_id", "1"], ["created_at", "2018-06-10 02:22:31.908785"], ["updated_at", "2018-06-10 02:22:31.908785"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Styling with CSS"], ["course_id", "1"], ["created_at", "2018-06-10 02:22:31.912896"], ["updated_at", "2018-06-10 02:22:31.912896"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "HTML: Interactive with JavaScript"], ["course_id", "1"], ["created_at", "2018-06-10 02:22:31.916848"], ["updated_at", "2018-06-10 02:22:31.916848"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "CSS"], ["created_at", "2018-06-10 02:22:31.919931"], ["updated_at", "2018-06-10 02:22:31.919931"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to CSS"], ["course_id", "2"], ["created_at", "2018-06-10 02:22:31.924026"], ["updated_at", "2018-06-10 02:22:31.924026"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mLesson Create (6.8ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Syntax"], ["course_id", "2"], ["created_at", "2018-06-10 02:22:31.927918"], ["updated_at", "2018-06-10 02:22:31.927918"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Styling HTML"], ["course_id", "2"], ["created_at", "2018-06-10 02:22:31.938712"], ["updated_at", "2018-06-10 02:22:31.938712"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "CSS: Animations"], ["course_id", "2"], ["created_at", "2018-06-10 02:22:31.943164"], ["updated_at", "2018-06-10 02:22:31.943164"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "JavaScript"], ["created_at", "2018-06-10 02:22:31.946019"], ["updated_at", "2018-06-10 02:22:31.946019"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:26
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to JavaScript"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.950233"], ["updated_at", "2018-06-10 02:22:31.950233"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Basics"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.954666"], ["updated_at", "2018-06-10 02:22:31.954666"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Variables"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.958456"], ["updated_at", "2018-06-10 02:22:31.958456"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Arrays"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.962910"], ["updated_at", "2018-06-10 02:22:31.962910"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Mathematics"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.966191"], ["updated_at", "2018-06-10 02:22:31.966191"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Conditional Statements"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.969834"], ["updated_at", "2018-06-10 02:22:31.969834"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "JavaScript: Loops"], ["course_id", "3"], ["created_at", "2018-06-10 02:22:31.980981"], ["updated_at", "2018-06-10 02:22:31.980981"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2018-06-10 02:22:31.984121"], ["updated_at", "2018-06-10 02:22:31.984121"]]
+  ↳ db/seeds.rb:34
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:35
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Intro to Ruby"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:31.987912"], ["updated_at", "2018-06-10 02:22:31.987912"]]
+  ↳ db/seeds.rb:35
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Basics"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:31.991491"], ["updated_at", "2018-06-10 02:22:31.991491"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Variables"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:31.994992"], ["updated_at", "2018-06-10 02:22:31.994992"]]
+  ↳ db/seeds.rb:37
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Arrays"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:31.998475"], ["updated_at", "2018-06-10 02:22:31.998475"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:39
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Mathematics"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:32.002067"], ["updated_at", "2018-06-10 02:22:32.002067"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mLesson Create (0.5ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Conditional Statements"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:32.006010"], ["updated_at", "2018-06-10 02:22:32.006010"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:41
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:41
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("name", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ruby: Loops"], ["course_id", "4"], ["created_at", "2018-06-10 02:22:32.009726"], ["updated_at", "2018-06-10 02:22:32.009726"]]
+  ↳ db/seeds.rb:41
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:41
