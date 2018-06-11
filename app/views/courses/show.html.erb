@@ -5,12 +5,12 @@
       <h1><%= @course.name %></h1>
 
       <div class="course-content">
-        <% 5.times do %>
+        <% @course.lessons.each do |lesson| %>
           <div class="lessons">
             <div class="lesson-status">
               <i data-feather="square"></i>
             </div>
-            <h2>LESSON</h2>
+            <h2><%= link_to "#{ lesson.name }", lesson_path(params[:id]) %></h2>
           </div>
         <% end %>
       </div>
