@@ -1,2 +1,297 @@
-<h1><%= @lesson.name %></h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
+<div id="main">
+  <div id="container">
+    <div class="course-title">
+      <br>
+
+      <h1 class="course-heading"><%= @lesson.course.name %></h1>
+      
+      <div class="lesson-title">
+        <h1><%= @lesson.name %></h1>
+
+          <div class="lesson-content"  style="text-align: left;">
+          <% if @lesson.id == 1 %>
+
+            <h3>What is HTML?</h3>
+            <p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.</p>
+
+            <h3>How does it work?</h3>
+            <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+
+            <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as 
+            <code>
+              <span><</span><span>img</span><span>/></span>
+            </code> 
+            and 
+            <code>
+              <span><</span> <span>input</span><span>/></span>
+            </code>
+             directly introduce content into the page. Other tags such as 
+            <code>
+              <span><</span><span>p</span><span>></span>
+            </code>
+            surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.</p>
+
+            <p>HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), maintainer of both the HTML and the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997.</p> <br>
+
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            
+          <% end %>
+
+          <% if @lesson.id == 2 %>
+
+            <h3>What does HTML code look like?</h3>
+
+            <p>
+              An HTML Document contains a basic structure of several important tags:
+            </p>
+
+            <code>
+              <ul>
+                <li>
+                  <span><</span>!DOCTYPE<span>><span>
+                </li>
+                <li>
+                  <span><</span>html<span>><span>
+                </li>
+                <li>
+                  <span><</span>head<span>><span>
+                </li>
+                <li>
+                  <span><</span>body<span>><span>
+                </li>
+              </ul>
+            </code>
+
+            <p>
+              Aside from the <code> <span><</span>!DOCTYPE<span>><span> </code> tag, you as the coder will fill in your code inside these tags.
+            </p>
+            <h3>
+              <code>
+                <span><</span>html<span>><span>
+              </code>
+            </h3>
+            <p>
+              The <code><span><</span>html<span>><span></code> tag tells the browser that this is an HTML document. The <code><span><</span>html<span>><span></code> tag also represents the root of an HTML document and is the container for all other HTML elements (except for the <code><span><</span>!DOCTYPE<span>><span></code> tag).
+            </p>
+
+            <h3>
+              <code>
+                <span><</span>head<span>><span>
+              </code>
+            </h3>
+            <p>
+              The <code><span><</span>head<span>><span></code> element is a container for all the head elements. The <code><span><</span>head<span>><span></code> element can include a title for the document, scripts, styles, meta information, and more.
+
+              The following elements can go inside the <code><span><</span>head<span>><span></code> element:
+              <ul>
+                <li><code><span><</span>title<span>><span></code> (this element is required in an HTML document)</li>
+                <li><code><span><</span>style<span>><span></code></li>
+                <li><code><span><</span>base<span>><span></code></li>
+                <li><code><span><</span>link<span>><span></code></li>
+                <li><code><span><</span>meta<span>><span></code></li>
+                <li><code><span><</span>script<span>><span></code></li>
+                <li><code><span><</span>noscript<span>><span></code></li>
+              </ul>
+            </p>
+
+            <h3>
+              <code>
+                <span><</span>body<span>><span>
+              </code>
+            </h3>
+            <p>
+              The <code><span><</span>body<span>><span></code> tag defines the document's body. The <code><span><</span>body<span>><span></code> element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc. In this area a coder begins to add the structure of the webpage, think of it as a skeleton.
+            </p> <br>
+
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+
+          <% end %>
+
+          <% if @lesson.id == 3 %>
+
+            <h3>What is an Element?</h3>
+            <p>
+              An HTML element is an individual component of an HTML document or web page, once this has been parsed into the Document Object Model. HTML is composed of a tree of HTML nodes, such as text nodes. Each node can have HTML attributes specified. Nodes can also have content, including other nodes and text.
+            </p>
+            <p>
+              An element contains three parts:
+                <ul>
+                  <li>Opening Tag: <code><span><</span>elementname<span>><span></code></li>
+                  <li>Content: In this area you can insert text, another element, or leave it blank if necessary.</li>
+                  <li> Closing Tag: <code><span><</span>/elementname<span>><span></code></li>
+                </ul>
+            </p>
+
+            <p>
+              An example of an html tag would be: <code><span><</span>h1<span>><span></code>Hello World!<code><span><</span>/h1<span>><span></code>
+            </p> <br>
+
+            <h3>Main Tags</h3>
+
+            <p>
+              Below are some of the most used tags, and the essential tags to creating a functioning web page.
+
+                <ul> <h4>Content Sectioning</h4>
+                  <li>
+                    <code><span><</span>article<span>><span></code>: The HTML <code><span><</span>article<span>><span></code> element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry.
+                  </li>
+                  <li>
+                    <code><span><</span>aside<span>><span></code>: The HTML <code><span><</span>aside<span>><span></code> element represents a portion of a document whose content is only indirectly related to the document's main content.
+                  </li>
+                  <li>
+                    <code><span><</span>header<span>><span></code>: The HTML <code><span><</span>header<span>><span></code> element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on.
+                  </li>
+                  <li>
+                    <code><span><</span>nav<span>><span></code>: The HTML <code><span><</span>nav<span>><span></code> element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
+                  </li>
+                  <li>
+                    <code><span><</span>footer<span>><span></code>: The HTML <code><span><</span>footer<span>><span></code> element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
+                  </li>
+                  <li>
+                    <code><span><</span>section<span>><span></code>: The HTML <code><span><</span>section<span>><span></code> element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document.
+                  </li>
+                  <li>
+                    <code><span><</span>h1<span>><span></code> - <code><span><</span>h6<span>><span></code>: The HTML <code><span><</span>h1<span>><span></code> - <code><span><</span>h6<span>><span></code> elements represent six levels of section headings. <code><span><</span>h1<span>><span></code> is the highest section level and <code><span><</span>h6<span>><span></code> is the lowest.
+                  </li>
+                </ul>
+
+                <ul> <h4>Text Content</h4>
+                  <li>
+                    <code><span><</span>blockquote<span>><span></code>: The HTML <code><span><</span>blockquote<span>><span></code> Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the <code><span><</span>cite<span>><span></code> element.
+                  </li>
+                  <li>
+                    <code><span><</span>div<span>><span></code>: The HTML Content Division element (<code><span><</span>div<span>><span></code>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS.
+                  </li>
+                  <li>
+                    <code><span><</span>ul<span>><span></code>: The HTML <code><span><</span>ul<span>><span></code> element represents an unordered list of items, typically rendered as a bulleted list.
+                  </li>
+                  <li>
+                    <code><span><</span>ol<span>><span></code>: The HTML <code><span><</span>ol<span>><span></code> element represents an ordered list of items, typically rendered as a numbered list.
+                  </li>
+                  <li>
+                    <code><span><</span>li<span>><span></code>: The HTML <code><span><</span>li<span>><span></code> element is used to represent an item in a list. It must be contained in a parent element: an ordered list (<code><span><</span>ol<span>><span></code>), an unordered list (<code><span><</span>ul<span>><span></code>), or a menu (<code><span><</span>menu<span>><span></code>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.
+                  </li>
+                  <li>
+                    <code><span><</span>p<span>><span></code>: The HTML <code><span><</span>p<span>><span></code> element represents a paragraph of text.
+                  </li>
+                </ul>
+
+                <ul> <h4>Media Tags</h4>
+                  <li>
+                    <code><span><</span>img<span>><span></code>: The HTML <code><span><</span>img<span>><span></code> element embeds an image into the document.
+                  </li>
+                  <li>
+                    <code><span><</span>audio<span>><span></code>: The HTML <code><span><</span>audio<span>><span></code> element embeds an audio into the document.
+                  </li>
+                  <li>
+                    <code><span><</span>video<span>><span></code>: The HTML Video element (<code><span><</span>video<span>><span></code>) embeds a media player which supports video playback into the document.
+                  </li>
+                  <li>
+                    <code><span><</span>source<span>><span></code>: The HTML <code><span><</span>source<span>><span></code> element specifies multiple media resources for the <code><span><</span>audio<span>><span></code> element, or the <code><span><</span>video<span>><span></code> element. It is an empty element. It is commonly used to serve the same media content in multiple formats supported by different browsers.
+                  </li>
+                </ul>
+                <ul> <h4>Forms</h4>
+                  <li>
+                    <code><span><</span>button<span>><span></code>: The HTML <code><span><</span>button<span>><span></code> element represents a clickable button, which can be used in forms, or anywhere in a document that needs simple, standard button functionality.
+                  </li>
+                  <li>
+                    <code><span><</span>form<span>><span></code>: The HTML <code><span><</span>form<span>><span></code> element represents a document section that contains interactive controls for submitting information to a web server.
+                  </li>
+                  <li>
+                    <code><span><</span>input<span>><span></code>: The HTML <code><span><</span>input<span>><span></code> element is used to create interactive controls for web-based forms in order to accept data from the user.
+                  </li>
+                  <li>
+                    <code><span><</span>label<span>><span></code>: The HTML <code><span><</span>label<span>><span></code> element represents a caption for an item in a user interface.
+                  </li>
+                  <li>
+                    <code><span><</span>textarea<span>><span></code>: The HTML <code><span><</span>textarea<span>><span></code> element represents a multi-line plain-text editing control.
+                  </li>
+                </ul>
+                <ul> <h4>Etc.</h4>
+                  <li>
+                    <code><span><</span>script<span>><span></code>: The HTML <code><span><</span>script<span>><span></code> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code.
+                  </li>
+                  <li>
+                    <code><span><</span>style<span>><span></code>: The HTML <code><span><</span>style<span>><span></code> element contains style information for a document, or part of a document.
+                  </li>
+                  <li>
+                    <code><span><</span>a<span>><span></code>: The HTML <code><span><</span>a<span>><span></code> element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.
+                  </li>
+                  <li>
+                    <code><span><</span>i<span>><span></code>: The HTML <code><span><</span>i<span>><span></code> element represents a range of text that is set off from the normal text for some reason. Some examples include technical terms, foreign language phrases, or fictional character thoughts. It is typically displayed in italic type.
+                  </li>
+                  <li>
+                    <code><span><</span>strong<span>><span></code>: The HTML Strong Importance Element (<code><span><</span>strong<span>><span></code>) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
+                  </li>
+                  <li>
+                    <code><span><</span>em<span>><span></code>: The HTML <code><span><</span>em<span>><span></code> element marks text that has stress emphasis. The <code><span><</span>em<span>><span></code> element can be nested, with each level of nesting indicating a greater degree of emphasis.
+                  </li>
+                  <li>
+                    <code><span><</span>small<span>><span></code>: The HTML <code><span><</span>small<span>><span></code> element makes the text font size one size smaller (for example, from large to medium, or from small to x-small) down to the browser's minimum font size.  In HTML5, this element is repurposed to represent side-comments and small print, including copyright and legal text, independent of its styled presentation.
+                  </li>
+                  <li>
+                    <code><span><</span>br<span>><span></code>: The HTML <code><span><</span>br<span>><span></code> element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
+                  </li>
+                  <li>
+                    <code><span><</span>hr<span>><span></code>: The HTML <code><span><</span>hr<span>><span></code> element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section); historically, this has been presented as a horizontal rule or line.
+                  </li>
+                </ul>
+            </p>
+            <br>
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 4 %>
+            <h3>What is an Attribute</h3>
+            <p>
+              HTML attribute is a modifier of an HTML element type. An attribute either modifies the default functionality of an element type or provides functionality to certain element types unable to function correctly without them. In HTML syntax, an attribute is added to an HTML start tag.
+            </p>
+            
+            <p>
+              An example of an HTML element with an attribute applied to it would look something like this: <code><span><</span>h1<span> class="heading"><span></code>Hello World!<code><span><</span>/h1<span>><span></code>
+            </p>
+
+            <h3>Main Attributes</h3>
+            <p>
+              <ul>
+                <li><strong>href="":</strong> HTML links are defined with the <code><span><</span>a<span>><span></code> tag. The link address is specified in the href attribute. (example: <code><span><</span>a<span> href="www.google.com"><span></code>)</li>
+                <li><strong>src="":</strong> The filename of the image source is specified in the src attribute. (example: <code><span><</span>img<span> src="css/images/cat.jpg"><span></code>)</li>
+                <li><strong>width="" and height="":</strong> Images in HTML have a set of size attributes, which specifies the width and height of the image. (example: <code><span><</span>img<span> src="css/images/cat.jpg" height="50" width="50"><span></code>)</li>
+                <li><strong>alt="":</strong> The value of the attribute can be read by screen readers. This way, someone "listening" to the webpage, e.g. a blind person, can "hear" the element.</li>
+                <li><strong>style="":</strong> The style attribute is used to specify the styling of an element, like color, font, size etc.</li>
+                <li><strong>id="":</strong> The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document). The id attribute is most used to point to a style in a style sheet, and by JavaScript (via the HTML DOM) to manipulate the element with the specific id.</li>
+                <li><strong>class="":</strong> The class attribute specifies one or more classnames for an element. The class attribute is mostly used to point to a class in a style sheet. However, it can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.</li>
+              </ul>
+            </p>
+            <br>
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+            
+          </div>
+      </div>
+        
+    </div>          
+  </div>
+</div>

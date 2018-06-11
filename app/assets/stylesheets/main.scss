@@ -283,7 +283,7 @@ div.alert {
 
   #container .course-title {
     width: 1000px;
-    background-color: white;
+    background-color: #E24E30;
     border-radius: 5px;
     box-shadow: 0 0 15px #191e22;
     margin-bottom: 200px;
@@ -291,7 +291,7 @@ div.alert {
 
   #container .course-content {
     width: 96%;
-    background-color: #1071B8;
+    background-color: #EF6535;
     margin: 0 2%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -303,6 +303,15 @@ div.alert {
   .course-content .lessons {
     padding: 20px 0;
     border-bottom: 2px solid #191e22;
+  }
+
+  .course-heading {
+    font-family: 'Snowstorm Bold', cursive;
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white; 
   }
 
   .lessons h2 {
@@ -320,8 +329,33 @@ div.alert {
     width: 50px;
   }
 
+  .lesson-title {
+    width: 96%;
+    background-color: #EF6535;
+    margin: 0 2%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 2px solid #191e22;
+    border-left: 2px solid #191e22;
+    border-right: 2px solid #191e22;
+  }
 
+  .lesson-content {
+    width: 96%;
+    background-color: white;
+    margin: 0 2%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 2px solid #191e22;
+    border-left: 2px solid #191e22;
+    border-right: 2px solid #191e22;
+    letter-spacing: 2px;
+    font-family: 'Quicksand', sans-serif;
+  }
 
+  .lesson-content h3, p {
+    margin: 15px;
+  }
 
   
 }
