@@ -5,14 +5,16 @@
       <h1><%= @course.name %></h1>
 
       <div class="course-content">
+
         <% @course.lessons.each do |lesson| %>
           <div class="lessons">
             <div class="lesson-status">
-              <i data-feather="square"></i>
+              <i data-feather="square"></i> INCOMPLETE
             </div>
-            <h2><%= link_to "#{ lesson.name }", lesson_path(params[:id]) %></h2>
+            <h2><%= link_to "#{ lesson.name }", lesson_path(lesson.id) %></h2>
           </div>
         <% end %>
+
       </div>
     </div>          
   </div>

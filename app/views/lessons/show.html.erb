@@ -1,14 +1,31 @@
 <div id="main">
   <div id="container">
-    <div class="course-title">
+  <% if @lesson.course.id == 1 %>
+    <div class="course-title" style="background-color: #E24E30;">
+  <% elsif @lesson.course.id == 2 %> 
+    <div class="course-title" style="background-color: #1071B8;">
+  <% elsif @lesson.course.id == 3 %>
+    <div class="course-title" style="background-color: #E4A138;">
+  <% elsif @lesson.course.id == 4 %>
+    <div class="course-title" style="background-color: #97111C;">
+  <% end %>
       <br>
 
       <h1 class="course-heading"><%= @lesson.course.name %></h1>
-      
-      <div class="lesson-title">
+      <% if @lesson.course.id == 1 %>
+        <div class="lesson-title" style="background-color: #EF6535;">
+      <% elsif @lesson.course.id == 2 %> 
+        <div class="lesson-title" style="background-color: #A5DAF0;">
+      <% elsif @lesson.course.id == 3 %>
+        <div class="lesson-title" style="background-color: #F0BE3B;">
+      <% elsif @lesson.course.id == 4 %>
+        <div class="lesson-title" style="background-color: #EA1C2C;">
+      <% end %>
         <h1><%= @lesson.name %></h1>
 
           <div class="lesson-content"  style="text-align: left;">
+
+          <!-- HTML Lessons -->
           <% if @lesson.id == 1 %>
 
             <h3>What is HTML?</h3>
@@ -288,7 +305,352 @@
             </div>
             <br>
           <% end %>
+
+          <% if @lesson.id == 5 %>
+            <h3>What is Styling?</h3>
+            <p>
+              Styling in an HTML document is how we add flavor and aesthetics to our structure. Think of this as the skin and features of a person over the skeleton.
+            </p>
+
+            <h3>How do we Style our HTML Document?</h3>
+            <p>
+              There are several ways you can target HTML and style it: 
+              <ul>
+                <li><strong>file.css:</strong> Having a seperate file in your projects folder is ideal way to go. You can target most tags by targeting the element, element id, or element class.</li>
+                <li><strong>Inline Styling:</strong> You can use the style attribute inside an element tag to use some css style inside the tag.</li>
+                <li><strong>Styling from the Head:</strong> You can also style your document through the head by using a <code><span><</span>style<span>><span></code> tag. </li>
+              </ul>
+            </p>
+            <br>
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 6 %>
+            fff
+          <% end %>
+
+          <!-- CSS Lessons -->
+          <% if @lesson.id == 7 %>
+            <h3>What is CSS?</h3>
+            <p>
+              Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+            </p>
+            <p>
+              CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.
+            </p>
+            <p>
+              Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternate formatting if the content is accessed on a mobile device.
+            </p>
+
+            <h3>How does it work?</h3>
+            <p>
+              Simple. You can create a css in your working folder and inside you can targer tags, class, or id from your HTML Document.
+            </p><br>
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+
+          <% end %>
             
+          <% if @lesson.id == 8 %>
+            <p>
+              CSS syntax is simple. it will always be formatted the same way. The standard format looks something like this:
+            </p><br>
+            <p>
+              <strong>h1 {<br>
+              &nbsp;&nbsp;background-color: black; <br>
+              &nbsp;&nbsp;letter-spacing: 2px; <br>
+              &nbsp;&nbsp;color: red;<br>
+              }</strong>
+              <br><br>or<br><br>
+              <strong>h1 {
+              &nbsp;background-color: black; 
+              &nbsp;letter-spacing: 2px; 
+              &nbsp;color: red;
+              }</strong>
+            </p><br>
+            <p>
+            The CSS code above targets all h1 elements on your HTML document and makes the background color to black, the color of the words to red, and add more space inbetween letters.
+            </p>
+
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 9 %>
+            <h3>Styling Tags</h3>
+            <p> You can change almost everything in an HTML document with the help of styling tags. There is a huge amount of CSS tags so below I will cover the main ones:
+              <h3>Main Tag</h3>  
+              <ul> 
+                <li>
+                  <strong>color:</strong> Changes the color of the lettering inside your target.
+                </li>
+                <li>
+                  <strong>background-color:</strong> Changes the background color of your target.
+                </li>
+                <li>
+                  <strong>width and height:</strong> Uses px (pixels), % (percentage), rem (root em), and many more units to size your target.
+                </li>
+                <li>
+                  <strong>border:</strong> Used to manipulate the border around certain things like images, divs, etc. format (2px solid/dashed/dotted/double #fff/white/rgb(255,255,255) ) (size, appearance, color)
+                </li>
+                <li>
+                  <strong>border-radius:</strong> Used to curve sharp corners on images, divs, or other blocks.
+                </li>
+                <li>
+                  <strong>font-family:</strong> Specifies what font you would like to use for the targeted area. format ('Cursive', sans-serif) (uses a backup font incase the browser does not support the first one.)
+                </li>
+                <li>
+                  <strong>float:</strong> Is used for positioning and layout on web pages. You can use key terms like left, right, inherit, or none
+                </li>
+                <li>
+                  <strong>font-size:</strong> Increases or decreases font sizing inside the targeted area.
+                </li>
+                <li>
+                  <strong>text-align:</strong> Aligns text left, center, right, or justified. Can be used on divs
+                </li>
+                <li>
+                  <strong>margin:</strong> Gives your targeted area space from the outside of its container.
+                </li>
+                <li>
+                  <strong>padding:</strong> Gives your targeted area space from the inside of its container.
+                </li>
+              </ul>
+            </p>
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 10 %>
+            <h3>What is CSS Animation?</h3>
+            <p>
+              CSS animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.
+            </p>
+
+            <h3>Key Frames</h3>
+            <p>
+              In media production, a key frame is a location on a timeline which marks the beginning or end of a transition. It holds special information that defines where a transition should start or stop. The intermediate frames are interpolated over time between those definitions to create the illusion of motion.
+            </p>
+            
+            <h3>Example Animation</h3>
+            <p>
+              <strong>
+                @keyframes example {<br>
+                &nbsp;&nbsp;0%   { background-color: red; } <br>
+                &nbsp;&nbsp;25%  { background-color: yellow; } <br>
+                &nbsp;&nbsp;50%  { background-color: blue; } <br>
+                &nbsp;&nbsp;100% { background-color: green; } <br>
+              }
+              </strong> <br><br>
+
+              and can be implemented like this: <br><br>
+
+              <strong>
+                div {<br>
+                &nbsp;&nbsp;width: 100px; <br>
+                &nbsp;&nbsp;height: 100px; <br>
+                &nbsp;&nbsp;animation-name: example; <br>
+                &nbsp;&nbsp;animation-duration: 4s; <br>
+                }
+              </strong>
+            </p>
+            <br>
+            <p>
+              The key frame animation above changes the div's background color 4 diffrent times going from red to yellow to blue to green, and every second it switches to a new color.
+            </p>
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          
+          <!-- JavaScript Lessons -->
+          <% if @lesson.id == 11 %>
+            <h3>What is JavaScript?</h3>
+            <p>
+              JavaScript, often abbreviated as JS, is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
+            </p>
+            <h3>What is it Used For?</h3>
+            <p>
+              On the backend, using Node.js, it's used for more or less the same reasons as Ruby or Python: scripting, writing web servers, and as a general purpose programming language. JavaScript is most commonly used as a client side scripting language. This means that JavaScript code is written into an HTML page. But it can also be used to solve Algorithms.
+            </p>
+
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 12 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 13 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 14 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 15 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 16 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 17 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <!-- Ruby Lessons -->
+          <% if @lesson.id == 18 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 19 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 20 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 21 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 22 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 23 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
+
+          <% if @lesson.id == 24 %>
+            
+            <div style="text-align: right;">
+              <button style="margin: 10px;">
+                Complete
+              </button>
+              
+            </div>
+            <br>
+          <% end %>
           </div>
       </div>
         
