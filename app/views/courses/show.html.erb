@@ -1,10 +1,26 @@
 <div id="main">
   <div id="container">
-    <div class="course-title">
+  <% if @course.id == 1 %>
+    <div class="course-title" style="background-color: #E24E30;">
+  <% elsif @course.id == 2 %>
+    <div class="course-title" style="background-color: #1071B8;">
+  <% elsif @course.id == 3 %>
+    <div class="course-title" style="background-color: #E4A138;">
+  <% elsif @course.id == 4 %>
+    <div class="course-title" style="background-color: #97111C;">
+  <% end %>
       <br>
       <h1><%= @course.name %></h1>
       <%= link_to "Back", user_path(current_user), class: "back-btn" %>
-      <div class="course-content">
+      <% if @course.id == 1 %>
+        <div class="course-content" style="background-color: #EF6535;">
+      <% elsif @course.id == 2 %>
+        <div class="course-content" style="background-color: #A5DAF0;">
+      <% elsif @course.id == 3 %>
+        <div class="course-content" style="background-color: #F0BE3B;">
+      <% elsif @course.id == 4 %>
+        <div class="course-content" style="background-color: #EA1C2C;">
+      <% end %>
 
         <% @course.lessons.each do |lesson| %>
           <div class="lessons">

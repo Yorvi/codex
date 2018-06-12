@@ -513,6 +513,54 @@
           <% end %>
 
           <% if @lesson.id == 12 %>
+          
+            <div class="codester">
+              <!--<div class="editor">
+                <textarea contenteditable="true"  class="codemirror-textarea"></textarea>
+              </div>
+              <div class="console">
+              
+              </div>
+              <div style="clear: both;"></div>-->
+              <div contenteditable="true" id="editor">
+  
+</div>
+
+<div id="console">
+</div>
+            </div>
+
+            <script>
+              <%# $(document).ready(function(){ 
+                var code = $(".codemirror-textarea")[0];
+                var editor = CodeMirror.fromTextArea( code, {
+                  lineNumbers: true });
+              });  %>
+
+              let log = console.log;
+              let error = console.error;
+              let editar = document.querySelector('#editor');
+              let consoleOut = document.querySelector('#console');
+
+              console.log = (...args) => {
+                consoleOut.innerHTML += 'OUTPUT > ' + args.toString() + '<br>';
+                log(...args);
+              }
+
+              console.error = (...args) => {
+                consoleOut.innerHTML += 'ERROR > ' + args.toString() + '<br>';
+                error(...args);
+              }
+
+              editar.addEventListener('keyup', e => {
+                try {
+                  if(e.which === 13) eval(e.target.textContent);
+                } catch (e) {
+                  console.error(e);
+                }
+              });
+
+            </script>
             
             <div style="text-align: right;">
               <button style="margin: 10px;">
