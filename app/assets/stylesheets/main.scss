@@ -204,7 +204,20 @@ div.alert {
     border: 10px solid #1071B8; 
     background-image: linear-gradient(90deg, #1071B8 50%, #A5DAF0 50%);
   }
-
+  .back-btn {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    padding: 20px;
+    background-color: #272F37;
+    color: white;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 60%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 20px;
+    text-decoration: none;
+  }
 
 
   
@@ -287,6 +300,9 @@ div.alert {
     border-radius: 5px;
     box-shadow: 0 0 15px #191e22;
     margin-bottom: 200px;
+  }
+  .course-title h1 {
+    display: inline-block;
   }
 
   #container .course-content {

@@ -3,7 +3,7 @@
     <div class="course-title">
       <br>
       <h1><%= @course.name %></h1>
-
+      <%= link_to "Back", user_path(current_user), class: "back-btn" %>
       <div class="course-content">
 
         <% @course.lessons.each do |lesson| %>

@@ -14,12 +14,16 @@
       <h1 class="course-heading"><%= @lesson.course.name %></h1>
       <% if @lesson.course.id == 1 %>
         <div class="lesson-title" style="background-color: #EF6535;">
+        <%= link_to "Back", course_path(1), class: "back-btn", style: "margin-top: 10px;" %>
       <% elsif @lesson.course.id == 2 %> 
         <div class="lesson-title" style="background-color: #A5DAF0;">
+        <%= link_to "Back", course_path(2), class: "back-btn", style: "margin-top: 10px;" %>
       <% elsif @lesson.course.id == 3 %>
         <div class="lesson-title" style="background-color: #F0BE3B;">
+        <%= link_to "Back", course_path(3), class: "back-btn", style: "margin-top: 10px;" %>
       <% elsif @lesson.course.id == 4 %>
         <div class="lesson-title" style="background-color: #EA1C2C;">
+        <%= link_to "Back", course_path(4), class: "back-btn", style: "margin-top: 10px;" %>
       <% end %>
         <h1><%= @lesson.name %></h1>
 
