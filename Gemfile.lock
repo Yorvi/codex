@@ -87,6 +87,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gravtastic (3.2.6)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -214,6 +215,7 @@ DEPENDENCIES
   codemirror-rails
   coffee-rails (~> 4.2)
   devise
+  gravtastic
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)

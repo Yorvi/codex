@@ -128,6 +128,87 @@
             <p>
               The <code><span><</span>body<span>><span></code> tag defines the document's body. The <code><span><</span>body<span>><span></code> element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc. In this area a coder begins to add the structure of the webpage, think of it as a skeleton.
             </p> <br>
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script>
 
             <div style="text-align: right;">
               <button style="margin: 10px;">
@@ -268,6 +349,87 @@
                   </li>
                 </ul>
             </p>
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script>
             <br>
             <div style="text-align: right;">
               <button style="margin: 10px;">
@@ -300,6 +462,87 @@
                 <li><strong>class="":</strong> The class attribute specifies one or more classnames for an element. The class attribute is mostly used to point to a class in a style sheet. However, it can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.</li>
               </ul>
             </p>
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script>
             <br>
             <div style="text-align: right;">
               <button style="margin: 10px;">
@@ -325,6 +568,87 @@
                 <li><strong>Styling from the Head:</strong> You can also style your document through the head by using a <code><span><</span>style<span>><span></code> tag. </li>
               </ul>
             </p>
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script>
             <br>
             <div style="text-align: right;">
               <button style="margin: 10px;">
@@ -336,7 +660,87 @@
           <% end %>
 
           <% if @lesson.id == 6 %>
-            fff
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script>
           <% end %>
 
           <!-- CSS Lessons -->
@@ -385,7 +789,89 @@
             </p><br>
             <p>
             The CSS code above targets all h1 elements on your HTML document and makes the background color to black, the color of the words to red, and add more space inbetween letters.
-            </p>
+            </p> 
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script>
+            <br>
 
             <div style="text-align: right;">
               <button style="margin: 10px;">
@@ -436,6 +922,87 @@
                 </li>
               </ul>
             </p>
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <!--<div class="toggleButton" id="javascript">JavaScript</div>-->
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                  <!--<textarea id="javascriptPanel" class="panel hidden" placeholder="Place your Javascript code here..."></textarea>-->
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script> <br>
             <div style="text-align: right;">
               <button style="margin: 10px;">
                 Complete
@@ -482,6 +1049,84 @@
             <p>
               The key frame animation above changes the div's background color 4 diffrent times going from red to yellow to blue to green, and every second it switches to a new color.
             </p>
+            <div id="bottom" class="grid">
+              <div id="header">
+
+                <div id="buttonContainer">
+
+                <div class="toggleButton active" id="html" >HTML</div>
+
+                  <div class="toggleButton" id="css" >CSS</div>
+
+                  <div class="toggleButton active" id="output">Output</div>
+
+                </div>
+
+              </div>
+
+              <div id="bodyContainer">
+                <div class="lefty">
+                  <textarea id="htmlPanel" class="panel" placeholder="Place your HTML code here..."></textarea>
+                  
+                  <textarea id="cssPanel" class="panel hidden" placeholder="Place your CSS code here..."></textarea>
+
+                </div>
+                <div class="righty">
+                  <iframe id="outputPanel" class="panel"></iframe>
+                </div> 
+              </div>
+              <div style="clear: both;"></div>
+            
+            <script>
+               function updateOutput() {
+ 	
+              $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>");
+              
+              document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+              
+              
+              
+              }
+              
+              $(".toggleButton").hover(function() {
+                
+                $(this).addClass("highlightedButton");
+                
+              }, function() {
+                
+                $(this).removeClass("highlightedButton");
+                
+              });
+              
+              $(".toggleButton").click(function() {
+                
+                $(this).toggleClass("active");
+                
+                $(this).removeClass("highlightedButton");
+                
+                var panelId = $(this).attr("id") + "Panel";
+                
+                $("#" + panelId).toggleClass("hidden");
+                
+                var numberOfActivePanels = 4 - $('.hidden').length;
+                
+                $(".panel").width(($(window).width() / numberOfActivePanels) - 10);
+                
+              })
+              
+              $(".panel").height($(window).height() - $("#header").height() - 15);
+              
+              $(".panel").width(($(window).width() / 2) - 10);
+              
+              updateOutput();
+              
+              $("textarea").on('change keyup paste', function() {
+                
+                updateOutput();
+                
+                
+              });
+            </script> <br>
             <div style="text-align: right;">
               <button style="margin: 10px;">
                 Complete
@@ -514,53 +1159,6 @@
 
           <% if @lesson.id == 12 %>
           
-            <div class="codester">
-              <!--<div class="editor">
-                <textarea contenteditable="true"  class="codemirror-textarea"></textarea>
-              </div>
-              <div class="console">
-              
-              </div>
-              <div style="clear: both;"></div>-->
-              <div contenteditable="true" id="editor">
-  
-</div>
-
-<div id="console">
-</div>
-            </div>
-
-            <script>
-              <%# $(document).ready(function(){ 
-                var code = $(".codemirror-textarea")[0];
-                var editor = CodeMirror.fromTextArea( code, {
-                  lineNumbers: true });
-              });  %>
-
-              let log = console.log;
-              let error = console.error;
-              let editar = document.querySelector('#editor');
-              let consoleOut = document.querySelector('#console');
-
-              console.log = (...args) => {
-                consoleOut.innerHTML += 'OUTPUT > ' + args.toString() + '<br>';
-                log(...args);
-              }
-
-              console.error = (...args) => {
-                consoleOut.innerHTML += 'ERROR > ' + args.toString() + '<br>';
-                error(...args);
-              }
-
-              editar.addEventListener('keyup', e => {
-                try {
-                  if(e.which === 13) eval(e.target.textContent);
-                } catch (e) {
-                  console.error(e);
-                }
-              });
-
-            </script>
             
             <div style="text-align: right;">
               <button style="margin: 10px;">

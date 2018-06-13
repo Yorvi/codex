@@ -24,9 +24,17 @@
 
         <% @course.lessons.each do |lesson| %>
           <div class="lessons">
+          <% if @lesson.complete? == false %>
             <div class="lesson-status">
               <i data-feather="square"></i> INCOMPLETE
             </div>
+          <% end %>
+          <% if @lesson.complete? == true %>
+            <div class="lesson-status complete">
+              <i data-feather="check-square"></i> COMPLETE
+            </div>
+          <% end %>
+            
             <h2><%= link_to "#{ lesson.name }", lesson_path(lesson.id) %></h2>
           </div>
         <% end %>

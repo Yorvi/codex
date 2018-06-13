@@ -181,6 +181,11 @@ div.alert {
     border: 1px solid #575757;
     display: inline-block;
   }
+  .complete {
+    background: linear-gradient(45deg, lightgreen, green);
+    box-shadow: 0 0 15px lightgreen;
+    border-radius: 5px; 
+  }
 
   .main-course p {
     margin-top: 50px;
@@ -362,7 +367,6 @@ div.alert {
   }
 
   .lesson-status svg {
-    fill: white;
     width: 50px;
   }
 
@@ -429,5 +433,197 @@ div.alert {
   font-family: monospace;
   padding: 10px;
   line-height: 1.4em;
+}
+
+#bottom {
+  width: 100%;
+}
+// #code {
+//   border: 1px solid black;
+//   float: left;
+//   width: 40%;
+//   height: 100%;
+//   margin: 0 10px;
+//   border-radius: 5px;
+// }
+// #html-only {
+//   width: 100%;
+//   height: 100%;
+// }
+// #html-only h4 {
+//   background-color: #A5DAF0;
+//   border-bottom: 1px solid black;
+//   margin: 0;
+//   padding: 15px 0;
+//   text-align: center;
+//   border-top-left-radius: 3px;
+//   border-top-right-radius: 3px;
+// }
+// #result {
+//   float: right;
+//   border: 1px solid black;
+//   width: 50%;
+//   height: 100%;
+//   margin: 0 10px;
+//   border-radius: 5px;
+// }
+// #result h4 {
+//   background-color: #A5DAF0;
+//   border-bottom: 1px solid black;
+//   margin: 0;
+//   padding: 15px 0;
+//   text-align: center;
+//   border-top-left-radius: 3px;
+//   border-top-right-radius: 3px;
+//   overflow: hidden;
+// }
+
+// #result iframe {
+//   width: 99%;
+//   height: 88%;
+//   overflow: hidden;
+//   border: none;
+// }
+// #result iframe::-webkit-scrollbar {
+//   display: none;
+// }
+
+// #bottom textarea {
+//   font-size: 16px;
+//   font-family: monospace;
+//   resize: none;
+//   border-color: white;  
+// }
+// #bottom textarea:focus {
+//   outline: none; 
+// }
+
+#header {
+	background-color: #EEEEEE;
+	padding:5px;
+	height: 30px;
+}
+
+#buttonContainer {
+	
+	width:300px;
+	margin: 0 auto;
+	
+}
+
+.toggleButton {
+	
+	float:left;
+	border: 1px solid grey;
+	padding: 6px;
+	border-right: none;
+	font-size: 90%;
+	cursor: pointer;
+}
+
+#html {
+	
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	
+}
+
+#output {
+	
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right: 1px solid grey;
+	
+}
+
+.active {
+	
+	background-color: #E8F2FF;
+	
+}
+
+.highlightedButton {
+	
+	background-color: grey;
+	
+}
+
+textarea {
+	
+	resize: none;
+	// border-top: none;
+	// border-color: grey;
+	
+}
+
+.panel {
+	display: inline-block;
+	float:left;
+	// border-left: none;
+}
+
+iframe {
+	
+	border:none;
+	
+}
+
+.hidden {
+	
+	display: none;
+	
+}
+div.lefty {
+  float: left;
+  width: 45%;
+  margin: 5px 10px 0;
+}
+div.righty {
+  float: right;
+  width: 45%;
+  border: 1px solid black;
+  margin: 5px 10px 0;
+}
+.righty iframe {
+  width: 100%;
+  height: 475px !important;
+}
+
+.lefty textarea {
+  width: 100% !important;
+  height: 232px !important;
+  font-size: 18px;
+  font-family: monospace;
+}
+.sign-out-btn {
+  width: 100px;
+  padding: 8px 0;
+  background-color: #1071B8;
+  text-align: center;
+  border-radius: 5px; 
+  border: 1px solid #0d588d;
+  text-decoration: none;
+  display: inline-block;
+}
+.sign-out-btn a {
+  text-decoration: none;
+  color: white;
+}
+.sign-out-btn:hover {
+  background-color: #0d588d;
+  cursor: pointer;
+}
+div button {
+  background-color: #191e22;
+  color: white;
+  padding: 20px;
+  border: 1px solid #ed4f4f;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+}
+div button:hover {
+  cursor: pointer;
+  background-color: #2b333a;
 }
 }
